@@ -1,7 +1,10 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         task0();
         task1();
+        task2();
     }
     public static void task0() {
         String city = "Vologda"; /* As you can imagine, this city means a lot
@@ -57,5 +60,13 @@ public class Main {
         System.out.println(usa.toUpperCase());
         System.out.println("Винни Пух".toUpperCase());
         System.out.println((caps + "they know I mean business").toUpperCase());
+    }
+    public static void task2() {
+        Scanner scanner = new Scanner("Люблю тебя, Петра творенье,\n" +
+                "Люблю твой строгий, стройный вид,\n" +
+                "Невы державное теченье,\n" +
+                "Береговой ее гранит");
+        String s = scanner.nextLine();
+        System.out.println(s);
     }
 }
