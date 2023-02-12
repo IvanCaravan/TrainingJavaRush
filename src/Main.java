@@ -1,10 +1,12 @@
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        task0();
+        /*task0();
         task1();
-        task2();
+        task2();*/
+        task3();
     }
     public static void task0() {
         String city = "Vologda"; /* As you can imagine, this city means a lot
@@ -68,5 +70,44 @@ public class Main {
                 "Береговой ее гранит");
         String s = scanner.nextLine();
         System.out.println(s);
+    }
+    public static void task3() {
+         System.out.println(" Привет! Напиши своё имя и возраст.");
+        Scanner console = new Scanner(System.in);
+        String name = console.nextLine();
+        int age = console.nextInt();
+
+        String swear = "везде побрито. Я с такими не общаюсь.";
+
+
+        if (Objects.equals(name, "Никита"))
+        {
+            System.out.println(swear);
+        }
+
+        else {
+
+            System.out.println("Привет, " + name + "! Я - Java Machine");
+            System.out.println("Приятно познакомиться! Молодо выглядишь для своих " + age + ")");
+            System.out.println("Ты - музыкант?");
+
+            Scanner key = new Scanner(System.in);
+            String harsh = "Ты кого тут надурить пытаешься? Говори на чём играешь, ЖИВО!";
+            String cool = "Круто)) Как называется твой инструмент?";
+
+            String answer = key.nextLine();
+            if (Objects.equals(answer, "нет")) {
+                System.out.println(harsh);
+            } else {
+                System.out.println(cool);
+            }
+
+
+            Scanner keyboard = new Scanner(System.in);
+            String inst = keyboard.nextLine();
+            System.out.println(" Хотел бы я услышать, как звучит " + inst + " , будь я человеком как ты...");
+
+        }
+
     }
 }
